@@ -1,0 +1,11 @@
+<div class="contain-range">
+  <div class="val-l">
+    <input type="text" [(ngModel)]="rangeValues.min" [value]="rangeValues.min" (keyup)="emitRange($event)">
+  </div>
+  <div class="slider"></div>
+  <div class="val-r">
+    <input type="text" [(ngModel)]="rangeValues.max" [value]="rangeValues.max" (keyup)="emitRange($event)">
+  </div>
+</div>
+
+<div class="alert alert-danger" role="alert" *ngIf="show_err">{{msg_err}}</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center minh-100">
+    <div class="col-lg-6">
+      <div class="box-title">
+        <h3 class="title">Fixed Range</h3>
+      </div>
+      <div class="box-range">
+        <div class="subtitle">
+          <b>Rango mínimo :</b> {{rangeValues.min}}€ -  <b>Rango máximo :</b> {{rangeValues.max}}€
+        </div>
+        <ngc-range [min]="rangeValues.min" [max]="rangeValues.max" [(ngModel)]="rangeValues" (rangeChange)="onChangeRange($event)"></ngc-range>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-3 text-center">
+      <button type="button" class="btn btn-outline-purple" (click)="goToNormal()" >Normal Range</button>
+    </div>
+    <div class="col-lg-3 text-center">
+      <button type="button" class="btn btn-purple" (click)="goToFixed()">Fixed Range</button>
+    </div>
+  </div>
+</div>

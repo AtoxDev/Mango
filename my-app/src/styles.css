@@ -1,0 +1,133 @@
+/* You can add global styles to this file, and also import other style files */
+
+body{
+  background: #f1f1f2;
+}
+
+.title {
+  font-family: 'Roboto Bold', sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  letter-spacing: 4px;
+  color: #242156;
+}
+
+.ui-slider-range.ui-corner-all {
+  background: #e41c77;
+  border:none;
+}
+
+.ui-widget.ui-widget-content {
+  border:none;
+  border-radius: 100px;
+  background: rgb(228 28 119 / 24%);
+}
+
+span.ui-slider-handle.ui-corner-all.ui-state-default {
+  border-radius: 100px;
+  background: #e41c77;
+  border: 3px solid #fff;
+  cursor: grab;
+  width: 1.3em;
+  height: 1.3em;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+  top: -.4em;
+  margin-left: -.6em;
+}
+
+/*transition: all .2s cubic-bezier(1, -0.5, 0.5, 1);*/
+.ui-state-active{
+  cursor: grabbing !important;
+  transition: transform .1s cubic-bezier(0.25, 0.46, 0.45, 0.94),border-radius .1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  top: -.8em !important;
+  width: 2em !important;
+  height: 2em !important;
+}
+:focus {
+  outline: none !important;
+}
+
+.box-title{
+  height: 70px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.box-range {
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.contain-range{
+  display: flex;
+}
+
+.slider{
+  width: 100%;
+}
+
+.val-l {
+  width: 70px;
+  font-family: 'Roboto';
+  font-weight: 100;
+  margin-top: -7px;
+}
+
+.val-r {
+  width: 100px;
+  font-family: 'Roboto';
+  font-weight: 100;
+  margin-top: -7px;
+}
+
+input {
+  background: none;
+  border: none;
+  width: 55px;
+}
+
+.btn-purple {
+  background: #e41c77;
+  border: none;
+  color: #ffffff;
+  font-family: Roboto;
+  font-weight: 100;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  height: 48px;
+}
+
+.btn-purple:hover {
+  background: #c3065b;
+  color: #ffffff;
+}
+
+.btn-outline-purple {
+  background: #ffffff;
+  border: 1px solid #e41c77;
+  color: #e41c77;
+  font-family: Roboto;
+  font-weight: 100;
+  letter-spacing: 3px;
+  word-spacing: 5px;
+  height: 48px;
+}
+
+.btn-outline-purple:hover{
+  background: #e41c77;
+  border: 1px solid #e41c77;
+  color: #ffffff;
+}
+
+.subtitle{
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 4px;
+  word-spacing: 5px;
+  margin-bottom: 5%;
+  color: #242156;
+}
