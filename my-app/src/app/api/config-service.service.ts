@@ -17,10 +17,34 @@ export class ConfigServiceService {
   }
 
   /**
-   ** Función para realizar el Login
+   ** Función para realizar el normal Range
    **/
   public getNormalRange() {
     this.ruta = this.urlBase + 'normalRange';
+    this.headers = new HttpHeaders()
+      .set('Accept', 'application/json')
+      .set('Content-Type', 'application/json')
+      .set('Accept-Language', 'es-ES,es;q=0.8');
+    return this.http.get<any>(this.ruta, {observe: 'response', headers: this.headers, responseType: 'json'});
+  }
+
+  /**
+   ** Función para realizar el Array de Range
+   **/
+  public getRangeArray() {
+    this.ruta = this.urlBase + 'rangeArray';
+    this.headers = new HttpHeaders()
+      .set('Accept', 'application/json')
+      .set('Content-Type', 'application/json')
+      .set('Accept-Language', 'es-ES,es;q=0.8');
+    return this.http.get<any>(this.ruta, {observe: 'response', headers: this.headers, responseType: 'json'});
+  }
+
+  /**
+   ** Función para realizar el FixedRange
+   **/
+  public getFixedRange() {
+    this.ruta = this.urlBase + 'fixedRange';
     this.headers = new HttpHeaders()
       .set('Accept', 'application/json')
       .set('Content-Type', 'application/json')

@@ -9,36 +9,29 @@ import {Router} from "@angular/router";
 })
 export class FixedRangeComponent implements OnInit {
   public rangeValues: any;
+  fixed: any;
 
   constructor(private api: ConfigServiceService, private router: Router) {
     this.rangeValues = {
       'min' : 0,
       'max' : 0
     }
+    this.fixed = 'fixed';
   }
 
 
   ngOnInit(): void {
-    this.api.getNormalRange().subscribe(res => {
+    this.api.getFixedRange().subscribe(res => {
       if(res.status == 200) {
-        this.rangeValues = res.body;
+        this.rangeValues = res.body.rangeValues[0];
       }
     }, error => {
       console.log(error);
     });
   }
 
-  public redirectTo(uri: any) {
-    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
-      this.router.navigate([uri]));
-  }
-
   public goToNormal() {
-    this.redirectTo('exercise1');
-  }
-
-  public goToFixed() {
-    this.redirectTo('exercise2');
+    this.router.navigate(['/exercise1']);
   }
 
   public onChangeRange(obj: any) {

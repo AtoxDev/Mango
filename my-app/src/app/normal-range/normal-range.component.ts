@@ -29,17 +29,8 @@ export class NormalRangeComponent implements OnInit {
     });
   }
 
-  public redirectTo(uri: any) {
-    this.router.navigateByUrl('/', {skipLocationChange: true}).then(() =>
-      this.router.navigate([uri]));
-  }
-
-  public goToNormal() {
-    this.redirectTo('exercise1');
-  }
-
   public goToFixed() {
-    this.redirectTo('exercise2');
+    this.router.navigate(['/exercise2']);
   }
 
   public onChangeRange(obj: any) {

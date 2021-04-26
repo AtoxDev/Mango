@@ -1,6 +1,9 @@
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import {Router} from "@angular/router";
+import {NormalRangeComponent} from "./normal-range/normal-range.component";
+import {FixedRangeComponent} from "./fixed-range/fixed-range.component";
 
 describe('AppComponent', () => {
   beforeEach(async () => {
@@ -9,7 +12,9 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        NormalRangeComponent,
+        FixedRangeComponent
       ],
     }).compileComponents();
   });
